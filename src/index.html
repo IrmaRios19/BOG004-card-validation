@@ -2,13 +2,132 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
+    <title>Tarjeta de crédito</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+
     <header>
-      <p>hola</p> 
-    </header>
+    <h2>Bienvenid@ a almacenes</h2> 
+  </header>
+  
+  <body>
+    <!-- dividimos para crear sectores e implementar css -->
+    <div id="datoscomprador">
+      <div id="subtitulocomprador">
+        <h2>Datos del comprador</h2>
+      </div>
+      <div id="formulariocomprador">
+        <!--<form>
+          <label for="name">Nombre</label>
+          <input type="text" id="name" name="name"></br>
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email"></br>
+          <label for="phone">Teléfono</label>
+          <input type="text" id="phone" name="phone"></br>
+          <label for="direction">Dirección</label>
+          <input type="text" id="direction" name="direction"></br>
+          <label for="city">Ciudad</label>
+          <input type="text" id="city" name="city">-->
+        
+        <form>
+           <label>Nombre
+            <input type="text" name="name" id="name">
+           </label></br>
+           <label for="email">Email
+            <input type="text" name="email" id="email">
+           </label></br>
+           <label for="phone">Teléfono
+            <input type="text" name="phone" id="phone" value="">
+           </label></br>
+           <label for="direction">Dirección
+           <input type="text" name="direction" id="direction" value="">
+           </label></br>
+           <label for="city">Ciudad
+            <input type="text" name="city" id="city" value="">
+           </label>
+          </div></br></br>
+          <!--<input type="button" name="btn" value="Guardar" onclick="ClicEnviar()">-->
+          <button class="Guardar" type="button" id="btn1">Guardar</button>
+          </br></br>
+        </form>
+      </div>
+    </div>
+    
+    <div id="datostarjeta">
+      <div id="subtitulotarjeta">
+        <h2>Datos de tarjeta</h2>
+      </div>
+  
+      <form>
+        <div id="validartarjeta">
+          <!--<label for="cardnumber">Número de tarjeta</label>
+          <input type="text" id="cardnumber" name="cardnumber" placeholder="Ingresa # tarjeta">-->
+         <label>Número de tarjeta
+          <input type="number" name="cardnumber" id="cardnumber" placeholder="Ingresa número de tarjeta">
+         </label>
+         </br>
+         <button class="Validar" type="button" id="btn2">Validar</button>
+        </div></br>
+        <div class="container_answers">
+          <input type="radio" id="answer_1" name="franquicia">
+          <input type="radio" id="answer_2" name="franquicia">
+          <input type="radio" id="answer_3" name="franquicia">
+          <input type="radio" id="answer_1" name="franquicia">
+        </div></br>
+
+        <!--<input type="text" id="cuotas" name="cuotas" placeholder="¿En cuántas cuotas deseas pagar?" disabled>-->
+  
+        <div id="formulariotarjeta">
+        <!--<select class="" name="cuotas">-->
+        <input list="browsers" id="myBrowser" name="myBrowser" placeholder="Número de cuotas"/>
+        <datalist id="browsers">
+         <option value="1 cuota"></option>
+         <option value="2 cuotas"></option>
+         <option value="3 cuotas"></option>
+         <option value="4 cuotas"></option>
+         <option value="5 cuotas"></option>
+         <option value="6 cuotas"></option>
+         <option value="7 cuotas"></option>
+         <option value="8 cuotas"></option>
+         <option value="9 cuotas"></option>
+         <option value="10 cuotas"></option>
+         <option value="11 cuotas"></option>
+         <option value="12 cuotas"></option>
+         <option value="24 cuotas"></option>
+         <option value="36 cuotas"></option>
+        </datalist>
+        <!--</select>-->
+        </br>
+        </br>
+        <!--<label for="namecard">Nombre y Apellido como figura en la tarjeta</label></br>
+        <input type="text" id="namecard" name="namecard"></br>
+        <label for="Expirationdate">Fecha de vencimiento</label></br>
+        <!--<input type="text" id="Expirationdate" name="Expirationdate">>
+        <input type="month" id="Expirationdate" name="Expirationdate" min="2022-01" max="">
+        </br>
+        <label for="securitycode">Código de seguridad</label></br>
+        <input type="text" id="securitycode" name="securitycode"></br></br>
+        <input type="button" name="btn2" value="Pagar" onclick="ClicPagar()">
+        <p id="pagar" style="display:None"></p>-->
+
+
+        <label>Nombre y Apellido como figura en la tarjeta </br>
+         <input type="text" name="namecard">
+        </label></br></br>
+        <label>Fecha de vencimiento</br>
+          <input type="month" name="Expirationdate" min="2022-01" max=""required>
+        </label></br>
+        <label>Código de seguridad</br>
+         <input type="number" name="securitycode" size="4" min="0000" max="9999" required>
+         
+        </label></br></br>
+        <input type="button" name="btn2" value="Pagar" onclick="ClicPagar()">
+        <p id="pagar" style="display:None"></p>        
+      </form>
+    </div>
+    </div>
+  
+
     <main></main>
     <footer></footer>
     <script src="index.js" type="module"></script>
