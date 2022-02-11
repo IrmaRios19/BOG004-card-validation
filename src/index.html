@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
 
-    <header>
+  <header>
     <h2>Bienvenid@ a almacenes</h2> 
   </header>
   
@@ -16,6 +16,7 @@
       <div id="subtitulocomprador">
         <h2>Datos del comprador</h2>
       </div>
+
       <div id="formulariocomprador">
         <!--<form>
           <label for="name">Nombre</label>
@@ -30,23 +31,22 @@
           <input type="text" id="city" name="city">-->
         
         <form>
-           <label>Nombre
-            <input type="text" name="name" id="name">
-           </label></br>
-           <label for="email">Email
-            <input type="text" name="email" id="email">
-           </label></br>
-           <label for="phone">Teléfono
-            <input type="text" name="phone" id="phone" value="">
-           </label></br>
-           <label for="direction">Dirección
+          <label for = "Nombre">Nombre
+           <input type="text" name="name" id="name" value="">
+          </label></br>
+          <label for ="email">Email
+           <input type="text" name="email" id="email" value="">
+          </label></br>
+          <label for="phone">Teléfono
+           <input type="text" name="phone" id="phone" value="">
+          </label></br>
+          <label for="direction">Dirección
            <input type="text" name="direction" id="direction" value="">
-           </label></br>
-           <label for="city">Ciudad
-            <input type="text" name="city" id="city" value="">
-           </label>
-          </div></br></br>
-          <!--<input type="button" name="btn" value="Guardar" onclick="ClicEnviar()">-->
+          </label></br>
+          <label for="city">Ciudad
+           <input type="text" name="city" id="city" value="">
+          </label></br></br>
+          <!--<input type="button" name="btn1" value="Guardar" onclick="ClicEnviar()">-->
           <button class="Guardar" type="button" id="btn1">Guardar</button>
           </br></br>
         </form>
@@ -63,38 +63,40 @@
           <!--<label for="cardnumber">Número de tarjeta</label>
           <input type="text" id="cardnumber" name="cardnumber" placeholder="Ingresa # tarjeta">-->
          <label>Número de tarjeta
-          <input type="number" name="cardnumber" id="cardnumber" placeholder="Ingresa número de tarjeta">
+          <input type="text" name="cardNumber" id="cardNumber" placeholder="Ingresa número de tarjeta" value="">
          </label>
          </br>
          <button class="Validar" type="button" id="btn2">Validar</button>
         </div></br>
+
         <div class="container_answers">
           <input type="radio" id="answer_1" name="franquicia">
           <input type="radio" id="answer_2" name="franquicia">
+          +
           <input type="radio" id="answer_3" name="franquicia">
           <input type="radio" id="answer_1" name="franquicia">
         </div></br>
 
         <!--<input type="text" id="cuotas" name="cuotas" placeholder="¿En cuántas cuotas deseas pagar?" disabled>-->
   
-        <div id="formulariotarjeta">
-        <!--<select class="" name="cuotas">-->
-        <input list="browsers" id="myBrowser" name="myBrowser" placeholder="Número de cuotas"/>
+        <div id="cuotas">
+         <!--<select class="" name="cuotas">-->
+         <input list="browsers" id="myBrowser" name="myBrowser" placeholder="Número de cuotas"/>
         <datalist id="browsers">
-         <option value="1 cuota"></option>
-         <option value="2 cuotas"></option>
-         <option value="3 cuotas"></option>
-         <option value="4 cuotas"></option>
-         <option value="5 cuotas"></option>
-         <option value="6 cuotas"></option>
-         <option value="7 cuotas"></option>
-         <option value="8 cuotas"></option>
-         <option value="9 cuotas"></option>
-         <option value="10 cuotas"></option>
-         <option value="11 cuotas"></option>
-         <option value="12 cuotas"></option>
-         <option value="24 cuotas"></option>
-         <option value="36 cuotas"></option>
+          <option value="1 cuota"></option>
+          <option value="2 cuotas"></option>
+          <option value="3 cuotas"></option>
+          <option value="4 cuotas"></option>
+          <option value="5 cuotas"></option>
+          <option value="6 cuotas"></option>
+          <option value="7 cuotas"></option>
+          <option value="8 cuotas"></option>
+          <option value="9 cuotas"></option>
+          <option value="10 cuotas"></option>
+          <option value="11 cuotas"></option>
+          <option value="12 cuotas"></option>
+          <option value="24 cuotas"></option>
+          <option value="36 cuotas"></option>
         </datalist>
         <!--</select>-->
         </br>
@@ -125,11 +127,7 @@
         <p id="pagar" style="display:None"></p>        
       </form>
     </div>
-    </div>
-  
-
-    <main></main>
-    <footer></footer>
+          
     <script src="index.js" type="module"></script>
   </body>
 </html>
