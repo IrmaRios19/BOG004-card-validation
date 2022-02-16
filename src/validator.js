@@ -1,66 +1,62 @@
 const validator = {
-  isValid: function(creditCardNumber){
-
+  isValid: function (cardnumber) {
+    
     /* realizamos el revés de los números de la tarjeta */
-    const numeroTarjeta = document.getElementById("cardNumber").value;
-    const arregloNumeroTarjeta = Array.from(numeroTarjeta);
+    /*let numeroTarjeta1 = document.getElementById("cardNumber").value;*/
+    const arregloNumeroTarjeta = Array.from(cardnumber);
     const reversaNumeroTarjeta = arregloNumeroTarjeta.reverse();
-    console.log (reversaNumeroTarjeta);
+    const nuevoNumeroDeTarjeta = []
+    const reversaANumero = reversaNumeroTarjeta.forEach((num) => {nuevoNumeroDeTarjeta.push(parseInt(num))});
+    console.log (typeof(nuevoNumeroDeTarjeta[3]))
+    console.log(nuevoNumeroDeTarjeta)
 
-    /* duplicamos posciones pares y simplificación */
+     /* duplicamos posciones pares y simplificación */
     const resultado = [];
-    reversaNumeroTarjeta.forEach((num, index) => {
+    nuevoNumeroDeTarjeta.forEach((num, index) => {
       let modulo = (index + 1) % 2;
       if (modulo === 0){
-        let dobleDePares = parseInt(num) * 2;
-         if (dobleDePares >= 10){
-          let paresATexto = dobleDePares.toString();
-          let separarParesTexto = paresATexto.split("");
-          let declaracionParaReduce = (a,b) => parseInt(a) + parseInt(b);
-
-          let reduceDePares = separarParesTexto.reduce(declaracionParaReduce)
-          console.log(reduceDePares)
-          resultado.push(reduceDePares)
+        let dobleDePares = num * 2;
+          if (dobleDePares >= 10){
+          let cadenaMayoresQue10 = (Array.from(dobleDePares.toString())).map(Number);
+            console.log(typeof(cadenaMayoresQue10[1]))
+            console.log(cadenaMayoresQue10)
+          let numeroFinalMayoresQue10 = cadenaMayoresQue10.reduce((acumulador, num) => acumulador + num);
+          resultado.push(numeroFinalMayoresQue10)
         }
         else {
           resultado.push(dobleDePares)
         }
         
       }
-
-      else{
-        resultado.push(parseInt(num))
-        
+      else {
+        resultado.push(num)
       }
-      console.log(resultado)
-    });
+    })
+    console.log(resultado)
+     console.log(typeof(resultado[3]))
 
      /* validación */
+     let validacionLuhn = resultado.reduce((acumulador, num) => acumulador + num);
+     console.log(validacionLuhn)
      
-    let totalDeLaValidacion = 0;
-    for(let i = 0 ; i <= resultado.lenght ; i++ ){
-        totalDeLaValidacion += resultado[i];
-    }
-    console.log(totalDeLaValidacion)
-    if(totalDeLaValidacion % 10 == 0){
-      alert("Tu tarjeta ha sido validada con éxito")
+        if(validacionLuhn % 10 === 0){
+      return true
     }
     else{
-      alert("Por favor ingresa un número de tarjeta válido")
+      return false
     }
+  },
+   /*enmascarar número de tarjeta*/
+  maskify: function (tarjeta) {
+    /*const tarjeta = document.getElementById("cardNumber").value;*/
+    const ultimosDigitos = tarjeta.slice(-4);
+    const primerosDigitos = tarjeta
+      .slice(0 , -4)
+      .replace(/\d/g, "#");
+    console.log(primerosDigitos + ultimosDigitos)
+    return primerosDigitos + ultimosDigitos;
   }
-
-  /* enmascarar número de tarjeta */
-  maskify: function(creditCardNumber){
-    const numeroTarjeta2 = document.getElementById(cardNumber).value;
-    console.log(numeroTarjeta2)
-    const ultimosDigitos = numeroTarjeta2.slice(-4);
-    const enmascararCon = "#";
-    const enmascarar = enmascararCon.repeat(numeroTarjeta2 - ultimosDigitos) + ultimosDigitos;
-    console.log(enmascarar)
-  } 
-  
-  
+      
 };
 
 export default validator;

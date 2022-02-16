@@ -1,0 +1,75 @@
+*{
+    font-family: Roboto;
+  }
+
+.titulo {
+    align-items: center;
+    display: flex;
+    height: 110px;
+    width: 5000px;
+    position: absolute;
+    left: 32%;
+    top: 0px;
+}
+
+#linea {
+    border-top: 3px solid #F3DF24;
+    height: 2px;
+    max-width: 2000px;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+#datoscomprador {
+    font-size: 12px;
+    width: 650px;
+    height: 300px;
+    border-radius: 30px;
+    background: #FFFDFD;
+    left: 22%;
+    top: 10%;
+    position: relative;
+    border: 1px solid #BDBABA;
+    box-shadow: 5px 10px 10px #BDBABA;
+}
+
+#subtitulo {
+    font-size: 13px;
+    width: 635px;
+    height: 35px;
+    top: 16%;
+    border: 1px solid #E5E6E9;
+    border-radius: 20px;
+    background: #ccc;
+    padding-left: 22px;
+}
+.formulario {
+    font-size: 12px;
+    color: #5E5E60;
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+}
+.formulario__btn {
+    width: 200px;
+    height: 35px;
+    position: absolute;
+    left: 35%;
+    top: 85%;
+    border-radius: 25px;
+    border: 1px solid #D78304;
+    background: #FFA724;
+    color: white;
+  }
+  #datostarjeta {
+    width: 650px;
+    height: 450px;
+    border-radius: 20px;
+    background: #FFFCFC;
+    left: 22%;
+    top: 10%;
+    position: relative;
+    border: 1px solid #BDBABA;
+    box-shadow: 5px 10px 10px #BDBABA;
+}
+ 

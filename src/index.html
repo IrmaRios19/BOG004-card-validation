@@ -2,129 +2,158 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Tarjeta de crédito</title>
-    <link rel="stylesheet" href="style.css" />
+      <title>Tarjeta de crédito</title>
+      <link rel="stylesheet" href="style.css" />
+   </div>
   </head>
 
   <header>
-    <h2>Bienvenid@ a almacenes</h2> 
+    
+    <div class="titulo">
+      <h1>Bienvenid@ a almacenes</h1>
+    </div></br></br></br></br>
+    <div id="linea"></div></br>
   </header>
   
   <body>
-    <!-- dividimos para crear sectores e implementar css -->
+    <!-- dividí para crear sectores e implementar css -->
     <div id="datoscomprador">
-      <div id="subtitulocomprador">
+      <div id="subtitulo">
         <h2>Datos del comprador</h2>
       </div>
 
-      <div id="formulariocomprador">
-        <!--<form>
-          <label for="name">Nombre</label>
-          <input type="text" id="name" name="name"></br>
-          <label for="email">Email</label>
-          <input type="text" id="email" name="email"></br>
-          <label for="phone">Teléfono</label>
-          <input type="text" id="phone" name="phone"></br>
-          <label for="direction">Dirección</label>
-          <input type="text" id="direction" name="direction"></br>
-          <label for="city">Ciudad</label>
-          <input type="text" id="city" name="city">-->
-        
-        <form>
-          <label for = "Nombre">Nombre
-           <input type="text" name="name" id="name" value="">
-          </label></br>
-          <label for ="email">Email
-           <input type="text" name="email" id="email" value="">
-          </label></br>
-          <label for="phone">Teléfono
-           <input type="text" name="phone" id="phone" value="">
-          </label></br>
-          <label for="direction">Dirección
-           <input type="text" name="direction" id="direction" value="">
-          </label></br>
-          <label for="city">Ciudad
-           <input type="text" name="city" id="city" value="">
-          </label></br></br>
-          <!--<input type="button" name="btn1" value="Guardar" onclick="ClicEnviar()">-->
-          <button class="Guardar" type="button" id="btn1">Guardar</button>
+      <form id="formulario" class="formulario">
+        <!-- dividí para validar el formulario en javascript -->
+        <!-- grupo Nombre -->
+        <div class="formulario__grupo" id="grupo__name">
+          <label for ="name" class="formulario__label">Nombre </label>
+            <input type="text" class="formulario__input" name="name" id="name" placeholder="Nombres Apellidos" value="" required="required">
+            <!--<p class="formulario__input-error">Este campo sólo puede contener letras</p>-->
           </br></br>
-        </form>
-      </div>
+        </div>
+
+        <!-- grupo Email -->
+        <div class="formulario__grupo" id="grupo__email">
+          <label for ="email" class="formulario__label">Correo electrónico </label>
+            <input type="email" class="formulario__input" name="email" id="email" placeholder="ejemplo@gmail.com" value="" required="required">
+             <!--<p class="formulario__input-error">Ingresa tu correo electrónico</p>-->
+          </br></br>
+        </div>
+
+          <!-- grupo Teléfono -->
+        <div class="formulario__grupo" id="grupo__phone">
+          <label for ="phone" class="formulario__label">Teléfono </label>
+            <input type="tel" class="formulario__input" name="phone" id="phone" placeholder="300 0000000" value="" required="required">
+            <!-- <p class="formulario__input-error">Ingresa tu número fijo o celular</p>-->
+          </br></br>
+        </div>
+
+          <!-- grupo Dirección -->
+        <div class="formulario__grupo" id="grupo__adress">
+          <label for ="adress" class="formulario__label">Dirección </label>
+            <input type="text" class="formulario__input" name="adress" id="adress" placeholder="Dirección" value="" required="required">
+            <!-- <p class="formulario__input-error">Ingresa tu dirección actual</p>-->
+          </br></br>
+        </div>
+
+          <!-- grupo Ciudad -->
+          <div class="formulario__grupo" id="grupo__city">
+          <label for ="city" class="formulario__label">Ciudad </label>
+            <input type="text" class="formulario__input" name="city" id="city" placeholder="Ciudad" value="" required="required">
+            <!-- <p class="formulario__input-error">Ingresa tu ciudad de residencia actual</p>-->
+          </br></br>
+        </div>
+
+          <!-- grupo error -->
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <!-- <p>Error: por favor completa todos los campos correctamente para tu registro</p>-->
+            </br></br>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-guardar">        
+        <button type="submit" class="formulario__btn" id="btn1">Guardar</button>
+         <!-- <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Tu registro se realizó con éxito</p>-->
+          </br></br>
+        </div>
+
+        
+      </form>
     </div>
     
     <div id="datostarjeta">
-      <div id="subtitulotarjeta">
+      <div id="subtitulo">
         <h2>Datos de tarjeta</h2>
       </div>
   
-      <form>
-        <div id="validartarjeta">
-          <!--<label for="cardnumber">Número de tarjeta</label>
-          <input type="text" id="cardnumber" name="cardnumber" placeholder="Ingresa # tarjeta">-->
-         <label>Número de tarjeta
-          <input type="text" name="cardNumber" id="cardNumber" placeholder="Ingresa número de tarjeta" value="">
-         </label>
-         </br>
-         <button class="Validar" type="button" id="btn2">Validar</button>
-        </div></br>
+      <form id="formulario" class="formulario">
 
+         <!-- grupo Número de Tarjeta -->
+        <div class="formulario__grupo" id="grupo__cardNumber">
+          <label for ="cardNumber" class="formulario__label">Número de tarjeta </label></br></br>
+            <input type="text" class="formulario__input" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000" value="" minlength="15" maxlength="16" required="required">
+            <!-- <p class="formulario__input-error">Ingresa el número de tu Tarjeta</p>-->
+          </br></br>
+        </div>
+        
         <div class="container_answers">
           <input type="radio" id="answer_1" name="franquicia">
           <input type="radio" id="answer_2" name="franquicia">
-          +
           <input type="radio" id="answer_3" name="franquicia">
           <input type="radio" id="answer_1" name="franquicia">
-        </div></br>
+        </div></br></br>
 
-        <!--<input type="text" id="cuotas" name="cuotas" placeholder="¿En cuántas cuotas deseas pagar?" disabled>-->
-  
-        <div id="cuotas">
-         <!--<select class="" name="cuotas">-->
-         <input list="browsers" id="myBrowser" name="myBrowser" placeholder="Número de cuotas"/>
-        <datalist id="browsers">
-          <option value="1 cuota"></option>
-          <option value="2 cuotas"></option>
-          <option value="3 cuotas"></option>
-          <option value="4 cuotas"></option>
-          <option value="5 cuotas"></option>
-          <option value="6 cuotas"></option>
-          <option value="7 cuotas"></option>
-          <option value="8 cuotas"></option>
-          <option value="9 cuotas"></option>
-          <option value="10 cuotas"></option>
-          <option value="11 cuotas"></option>
-          <option value="12 cuotas"></option>
-          <option value="24 cuotas"></option>
-          <option value="36 cuotas"></option>
-        </datalist>
-        <!--</select>-->
-        </br>
-        </br>
-        <!--<label for="namecard">Nombre y Apellido como figura en la tarjeta</label></br>
-        <input type="text" id="namecard" name="namecard"></br>
-        <label for="Expirationdate">Fecha de vencimiento</label></br>
-        <!--<input type="text" id="Expirationdate" name="Expirationdate">>
-        <input type="month" id="Expirationdate" name="Expirationdate" min="2022-01" max="">
-        </br>
-        <label for="securitycode">Código de seguridad</label></br>
-        <input type="text" id="securitycode" name="securitycode"></br></br>
-        <input type="button" name="btn2" value="Pagar" onclick="ClicPagar()">
-        <p id="pagar" style="display:None"></p>-->
+        <!-- grupo cuotas -->
+        <div class="formulario__grupo" id="grupo__cuotas">
+          <label for ="cuotas" class="formulario__label"></label>
+            <select class="formulario__input" name="cuotas" id="cuotas"  placeholder="¿En cuántas cuotas deseas diferir tu compra?" required="required">
+              <option value="1 cuota">1 cuota</option>
+              <option value="2 cuotas">2 cuotas</option>
+              <option value="3 cuotas">3 cuotas</option>
+              <option value="4 cuotas">4 cuotas</option>
+              <option value="5 cuotas">5 cuotas</option>
+              <option value="6 cuotas">6 cuotas</option>
+              <option value="7 cuotas">7 cuotas</option>
+              <option value="8 cuotas">8 cuotas</option>
+              <option value="9 cuotas">9 cuotas</option>
+              <option value="10 cuotas">10 cuotas</option>
+              <option value="11 cuotas">11 cuotas</option>
+              <option value="12 cuotas">12 cuotas</option>
+              <option value="24 cuotas">24 cuotas</option>
+              <option value="36 cuotas">36 cuotas</option>
+            </select>
+          </br></br>
+        </div>
 
+         <!-- grupo Nombre en la Tarjeta -->
+        <div class="formulario__grupo" id="grupo__namecard">
+          <label for ="namecard" class="formulario__label">Nombre y Apellido como figura en la tarjeta </label></br></br>
+            <input type="text" class="formulario__input" name="namecard" id="namecard" placeholder="Nombre Apellido" value="" required="required">
+            <!-- <p class="formulario__input-error">Ingresa el nombre en tu Tarjeta</p>-->
+          </br></br>
+        </div>
 
-        <label>Nombre y Apellido como figura en la tarjeta </br>
-         <input type="text" name="namecard">
-        </label></br></br>
-        <label>Fecha de vencimiento</br>
-          <input type="month" name="Expirationdate" min="2022-01" max=""required>
-        </label></br>
-        <label>Código de seguridad</br>
-         <input type="number" name="securitycode" size="4" min="0000" max="9999" required>
-         
-        </label></br></br>
-        <input type="button" name="btn2" value="Pagar" onclick="ClicPagar()">
-        <p id="pagar" style="display:None"></p>        
+         <!-- grupo Fecha de vencimiento -->
+        <div class="formulario__grupo" id="grupo__vencimiento">
+          <label for ="vencimiento" class="formulario__label">Fecha de vencimiento </label></br></br>
+            <input type="month" class="formulario__input" name="vencimiento" id="vencimiento"min="2022-01" required="required">
+            <!-- <p class="formulario__input-error">Ingresa la fecha de vencimiento de tu Tarjeta</p>-->
+          </br></br>
+        </div>
+
+        <!-- grupo Código de Seguridad -->
+        <div class="formulario__grupo" id="grupo__cvs">
+          <label for ="cvs" class="formulario__label">CVS </label></br></br>
+            <input type="text" class="formulario__input" name="cvs" id="cvs" maxlength="4" required="required">
+            <!-- <p class="formulario__input-error">Ingresa el código de seguridad de tu Tarjeta</p>-->
+          </br></br>
+        </div>
+
+        <div class="formulario__grupo formulario__grupo-btn-pagar">        
+          <button type="submit" class="formulario__btn" id="btn2">Pagar</button>
+           <!-- <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Tu tarjeta ha sido validada con éxito</p>-->
+            </br></br>
+          </div>
+                        
       </form>
     </div>
           
