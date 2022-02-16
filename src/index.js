@@ -71,7 +71,7 @@ inputs.forEach((input) => {
 	input.addEventListener('keyup', validarFormulario);
 	})
 
-formulario.addEventListener('btn1', (e) => {
+formulario.addEventListener('btn1', () => {
 	
 	
 	if( campos.cardNumber && campos.email && campos.phone && campos.adress && campos.city){
@@ -119,9 +119,6 @@ btn2.addEventListener('click',(e)=>{
 
          }
    
-   /*else{
-      alert("diligencia bien")
-   }*/
 
 })
 

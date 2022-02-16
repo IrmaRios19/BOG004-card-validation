@@ -3,16 +3,17 @@ const validator = {
     
     /* realizamos el revés de los números de la tarjeta */
     /*let numeroTarjeta1 = document.getElementById("cardNumber").value;*/
+    const arregloDeNumeros = []
     const arregloNumeroTarjeta = Array.from(cardnumber);
     const reversaNumeroTarjeta = arregloNumeroTarjeta.reverse();
-    const nuevoNumeroDeTarjeta = []
-    const reversaANumero = reversaNumeroTarjeta.forEach((num) => {nuevoNumeroDeTarjeta.push(parseInt(num))});
-    console.log (typeof(nuevoNumeroDeTarjeta[3]))
-    console.log(nuevoNumeroDeTarjeta)
+    reversaNumeroTarjeta.forEach((num) => {arregloDeNumeros.push(parseInt(num))});
+    
+    console.log (typeof(arregloDeNumeros[3]))
+    console.log(arregloDeNumeros)
 
      /* duplicamos posciones pares y simplificación */
     const resultado = [];
-    nuevoNumeroDeTarjeta.forEach((num, index) => {
+    arregloDeNumeros.forEach((num, index) => {
       let modulo = (index + 1) % 2;
       if (modulo === 0){
         let dobleDePares = num * 2;
@@ -38,7 +39,7 @@ const validator = {
      /* validación */
      let validacionLuhn = resultado.reduce((acumulador, num) => acumulador + num);
      console.log(validacionLuhn)
-     
+
         if(validacionLuhn % 10 === 0){
       return true
     }
@@ -56,7 +57,7 @@ const validator = {
     console.log(primerosDigitos + ultimosDigitos)
     return primerosDigitos + ultimosDigitos;
   }
-      
+       
 };
 
 export default validator;

@@ -4,15 +4,15 @@
     <meta charset="utf-8">
       <title>Tarjeta de crédito</title>
       <link rel="stylesheet" href="style.css" />
-   </div>
   </head>
 
   <header>
     
     <div class="titulo">
       <h1>Bienvenid@ a almacenes</h1>
-    </div></br></br></br></br>
-    <div id="linea"></div></br>
+    </div>
+    <br><br><br><br>
+    <div id="linea"></div><br>
   </header>
   
   <body>
@@ -29,7 +29,7 @@
           <label for ="name" class="formulario__label">Nombre </label>
             <input type="text" class="formulario__input" name="name" id="name" placeholder="Nombres Apellidos" value="" required="required">
             <!--<p class="formulario__input-error">Este campo sólo puede contener letras</p>-->
-          </br></br>
+          <br><br>
         </div>
 
         <!-- grupo Email -->
@@ -37,7 +37,7 @@
           <label for ="email" class="formulario__label">Correo electrónico </label>
             <input type="email" class="formulario__input" name="email" id="email" placeholder="ejemplo@gmail.com" value="" required="required">
              <!--<p class="formulario__input-error">Ingresa tu correo electrónico</p>-->
-          </br></br>
+          <br><br>
         </div>
 
           <!-- grupo Teléfono -->
@@ -45,7 +45,7 @@
           <label for ="phone" class="formulario__label">Teléfono </label>
             <input type="tel" class="formulario__input" name="phone" id="phone" placeholder="300 0000000" value="" required="required">
             <!-- <p class="formulario__input-error">Ingresa tu número fijo o celular</p>-->
-          </br></br>
+          <br><br>
         </div>
 
           <!-- grupo Dirección -->
@@ -53,7 +53,7 @@
           <label for ="adress" class="formulario__label">Dirección </label>
             <input type="text" class="formulario__input" name="adress" id="adress" placeholder="Dirección" value="" required="required">
             <!-- <p class="formulario__input-error">Ingresa tu dirección actual</p>-->
-          </br></br>
+          <br><br>
         </div>
 
           <!-- grupo Ciudad -->
@@ -61,19 +61,19 @@
           <label for ="city" class="formulario__label">Ciudad </label>
             <input type="text" class="formulario__input" name="city" id="city" placeholder="Ciudad" value="" required="required">
             <!-- <p class="formulario__input-error">Ingresa tu ciudad de residencia actual</p>-->
-          </br></br>
+          <br><br>
         </div>
 
           <!-- grupo error -->
         <div class="formulario__mensaje" id="formulario__mensaje">
             <!-- <p>Error: por favor completa todos los campos correctamente para tu registro</p>-->
-            </br></br>
+            <br><br>
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-guardar">        
         <button type="submit" class="formulario__btn" id="btn1">Guardar</button>
          <!-- <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Tu registro se realizó con éxito</p>-->
-          </br></br>
+          <br><br>
         </div>
 
         
@@ -89,18 +89,18 @@
 
          <!-- grupo Número de Tarjeta -->
         <div class="formulario__grupo" id="grupo__cardNumber">
-          <label for ="cardNumber" class="formulario__label">Número de tarjeta </label></br></br>
+          <label for ="cardNumber" class="formulario__label">Número de tarjeta </label><br><br>
             <input type="text" class="formulario__input" name="cardNumber" id="cardNumber" placeholder="0000 0000 0000 0000" value="" minlength="15" maxlength="16" required="required">
             <!-- <p class="formulario__input-error">Ingresa el número de tu Tarjeta</p>-->
-          </br></br>
+          <br><br>
         </div>
         
         <div class="container_answers">
           <input type="radio" id="answer_1" name="franquicia">
           <input type="radio" id="answer_2" name="franquicia">
           <input type="radio" id="answer_3" name="franquicia">
-          <input type="radio" id="answer_1" name="franquicia">
-        </div></br></br>
+          <input type="radio" id="answer_4" name="franquicia">
+        </div><br><br>
 
         <!-- grupo cuotas -->
         <div class="formulario__grupo" id="grupo__cuotas">
@@ -121,37 +121,37 @@
               <option value="24 cuotas">24 cuotas</option>
               <option value="36 cuotas">36 cuotas</option>
             </select>
-          </br></br>
+          <br><br>
         </div>
 
          <!-- grupo Nombre en la Tarjeta -->
         <div class="formulario__grupo" id="grupo__namecard">
-          <label for ="namecard" class="formulario__label">Nombre y Apellido como figura en la tarjeta </label></br></br>
+          <label for ="namecard" class="formulario__label">Nombre y Apellido como figura en la tarjeta </label><br><br>
             <input type="text" class="formulario__input" name="namecard" id="namecard" placeholder="Nombre Apellido" value="" required="required">
             <!-- <p class="formulario__input-error">Ingresa el nombre en tu Tarjeta</p>-->
-          </br></br>
+          <br><br>
         </div>
 
          <!-- grupo Fecha de vencimiento -->
         <div class="formulario__grupo" id="grupo__vencimiento">
-          <label for ="vencimiento" class="formulario__label">Fecha de vencimiento </label></br></br>
+          <label for ="vencimiento" class="formulario__label">Fecha de vencimiento </label><br><br>
             <input type="month" class="formulario__input" name="vencimiento" id="vencimiento"min="2022-01" required="required">
             <!-- <p class="formulario__input-error">Ingresa la fecha de vencimiento de tu Tarjeta</p>-->
-          </br></br>
+          <br><br>
         </div>
 
         <!-- grupo Código de Seguridad -->
         <div class="formulario__grupo" id="grupo__cvs">
-          <label for ="cvs" class="formulario__label">CVS </label></br></br>
+          <label for ="cvs" class="formulario__label">CVS </label><br><br>
             <input type="text" class="formulario__input" name="cvs" id="cvs" maxlength="4" required="required">
             <!-- <p class="formulario__input-error">Ingresa el código de seguridad de tu Tarjeta</p>-->
-          </br></br>
+          <br><br>
         </div>
 
         <div class="formulario__grupo formulario__grupo-btn-pagar">        
           <button type="submit" class="formulario__btn" id="btn2">Pagar</button>
            <!-- <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Tu tarjeta ha sido validada con éxito</p>-->
-            </br></br>
+            <br><br>
           </div>
                         
       </form>
