@@ -33,7 +33,17 @@
     box-shadow: 5px 10px 10px #BDBABA;
 }
 
-#subtitulo {
+#subtitulo1 {
+    font-size: 13px;
+    width: 635px;
+    height: 35px;
+    top: 16%;
+    border: 1px solid #E5E6E9;
+    border-radius: 20px;
+    background: #ccc;
+    padding-left: 22px;
+}
+#subtitulo2 {
     font-size: 13px;
     width: 635px;
     height: 35px;

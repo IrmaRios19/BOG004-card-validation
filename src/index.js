@@ -1,6 +1,8 @@
 import validator from "./validator.js";
+
 const formulario = document.getElementById('formulario');
 const inputs = document.querySelectorAll('#formulario input');
+
 
 const expresiones = {
 	nombre: /^[a-zA-ZÀ-ÿ\s]$/, // Letras y espacios, pueden llevar acentos.
@@ -104,23 +106,32 @@ formulario.addEventListener('btn1', () => {
 
 const btn2 = document.getElementById('btn2');
 
+
+
 btn2.addEventListener('click',(e)=>{
    e.preventDefault();
    let tarjeta = document.getElementById("cardNumber").value;
+   
    /*if( campos.cardNumber && campos.nameCard && campos.cvs){*/
          let validacion = validator.isValid(tarjeta);
-         validator.maskify(tarjeta);
-         console.log(validator);
+         let enmasc = validator.maskify(tarjeta);
+         console.log(enmasc)
+         /*console.log(validator);*/
          if(validacion === true){
-            alert ("Tu tarjeta ha sido validada con éxito")
+            alert ("Tu tarjeta ha sido validada con éxito") 
+            
+            
          }
          else{
             alert ("Ingresa un número de tarjeta válido")
 
          }
    
-
 })
+
+
+
+
 
 
 

@@ -6,7 +6,7 @@ const validator = {
     const arregloDeNumeros = []
     const arregloNumeroTarjeta = Array.from(cardnumber);
     const reversaNumeroTarjeta = arregloNumeroTarjeta.reverse();
-    reversaNumeroTarjeta.forEach((num) => {arregloDeNumeros.push(parseInt(num))});
+    reversaNumeroTarjeta.forEach((num) => {arregloDeNumeros.push(parseInt(num))}); 
     
     console.log (typeof(arregloDeNumeros[3]))
     console.log(arregloDeNumeros)
@@ -48,16 +48,22 @@ const validator = {
     }
   },
    /*enmascarar número de tarjeta*/
-  maskify: function (tarjeta) {
+  maskify: function (cardnumber) {
     /*const tarjeta = document.getElementById("cardNumber").value;*/
-    const ultimosDigitos = tarjeta.slice(-4);
-    const primerosDigitos = tarjeta
+    const ultimosDigitos = cardnumber.slice(-4);
+    const primerosDigitos =cardnumber
       .slice(0 , -4)
       .replace(/\d/g, "#");
+      
     console.log(primerosDigitos + ultimosDigitos)
-    return primerosDigitos + ultimosDigitos;
+    let cadenafinal = primerosDigitos + ultimosDigitos
+    
+   console.log(cadenafinal)
+   
   }
-       
+
+      
 };
 
 export default validator;
+
